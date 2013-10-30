@@ -20,6 +20,8 @@ var ServerList = Backbone.View.extend({
     })
 
     self.$el.trigger("change")
+
+    $(".default_timer").click();
   }
 
 })

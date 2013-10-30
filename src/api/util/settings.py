@@ -1,12 +1,13 @@
 from __future__ import with_statement
 import json
-
+import os
 
 def get_settings():
     """Parses the settings from redis-live.conf.
     """
     # TODO: Consider YAML. Human writable, machine readable.
-    with open("redis-live.conf") as config:
+    path = os.path.abspath('.')
+    with open("%s/%s"%(path,"redis-live.conf")) as config:
         return json.load(config)
 
 

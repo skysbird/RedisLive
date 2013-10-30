@@ -70,7 +70,6 @@ var BaseWidget = Backbone.View.extend({
   }
 
 , ChangeTimeFrame : function ( el ) {
-
     var selectionType = $(el.target).data("type")
       , timeFrame = parseInt( $(el.target).data("time") )
 
@@ -111,7 +110,6 @@ var BaseWidget = Backbone.View.extend({
 
       var endDate = new Date()
         , startDate = endDate          
-
       switch(selectionType) {
 
         case 'minute' : 
@@ -137,8 +135,8 @@ var BaseWidget = Backbone.View.extend({
 
       this.$el.find('[name=from]').val(this.ISODateString(startDate))
       this.$el.find('[name=to]').val(this.ISODateString(endDate))              
-      this.UpdateModel(false)
 
+      this.UpdateModel(false)
     }
   }
 

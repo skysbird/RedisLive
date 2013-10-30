@@ -15,7 +15,7 @@ class MemoryController(BaseController):
         return_data = dict(data=[],
                            timestamp=datetime.datetime.now().isoformat())
 
-        if from_date==None or to_date==None:
+        if from_date==None or to_date==None or from_date=="" or to_date=="":
             end = datetime.datetime.now()
             delta = datetime.timedelta(seconds=60)
             start = end - delta
@@ -29,6 +29,7 @@ class MemoryController(BaseController):
         prev_current=0
         counter=0
 
+        
         for data in self.stats_provider.get_memory_info(server, start, end):
             combined_data.append([data[0], data[1], data[2]])
 

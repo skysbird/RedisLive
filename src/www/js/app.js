@@ -37,6 +37,8 @@ var App = {
             el : $("#top-keys-widget-placeholder")
           , model : new TopKeysWidgetModel()
         })        
+
+
     }
 
   , RegisterPartials : function(){
@@ -66,3 +68,6 @@ var App = {
 
   }
 }
+
+
+

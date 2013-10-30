@@ -1,5 +1,5 @@
 from api.util import settings
-import sqliteprovider
+#import sqliteprovider
 import redisprovider
 
 
