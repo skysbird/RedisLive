@@ -7,7 +7,7 @@ def get_settings():
     """
     # TODO: Consider YAML. Human writable, machine readable.
     path = os.path.abspath('.')
-    with open("%s/%s"%(path,"redis-live.conf")) as config:
+    with open("%s/src/%s"%(path,"redis-live.conf")) as config:
         return json.load(config)
 
 
